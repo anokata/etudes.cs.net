@@ -1,4 +1,5 @@
 ﻿using System;
+using PersonLib;
 
 namespace ConsoleApp1
 {
@@ -14,7 +15,9 @@ namespace ConsoleApp1
             {
                 Console.WriteLine($"Hello {name} i is {i}");
             }
-            
+            Person p = new Person("violan");
+            p.display();
         }
     }
+
 }

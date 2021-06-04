@@ -1,4 +1,6 @@
 using System;
+using log = System.Console;
+using static System.Console;
 
 namespace LearnClasses {
 
@@ -11,7 +13,8 @@ namespace LearnClasses {
             f2.logInfo();
             Figurine f3 = new Figurine {name="Got it!"};
             f3.logInfo();
-            Human h;
+            Human h = new("zzz");
+            log.WriteLine(h);
         }
     }
 
