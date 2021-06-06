@@ -9,8 +9,9 @@ namespace ConsoleApp1
 
         static void Main(string[] args)
         {
-            Console.Write("Enter:");
-            string name = Console.ReadLine();
+            Console.Write("Enter name:");
+            string name = "sss";
+            name = Console.ReadLine();
             for (uint i = param_v; i < param_v+3; i++)
             {
                 Console.WriteLine($"Hello {name} i is {i}");
