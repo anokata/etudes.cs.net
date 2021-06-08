@@ -17,6 +17,10 @@ namespace LearnClasses {
             log.WriteLine(h);
             log.WriteLine(h.getMark());
             log.WriteLine(h.getMark('d'));
+
+            Vector2d v1 = new Vector2d { x = 1, y = 2 };
+            Vector2d v2 = new Vector2d { x = 2, y = 4 };
+            log.WriteLine((v1 + v2).mag());
         }
     }
 
@@ -60,6 +64,18 @@ namespace LearnClasses {
 
         public static int getMark(int x) {
             return x*2;
+        }
+    }
+
+    class Vector2d {
+        public int x {get; set;}
+        public int y {get; set;}
+        public int mag() {
+            return (int)(Math.Round(Math.Sqrt(x*x+y*y)));
+        }
+        public static Vector2d operator +(Vector2d a, Vector2d b) {
+            log.WriteLine("Vector2d operator +");
+            return new Vector2d {x = a.x + b.x, y = a.y + b.y };
         }
     }
 }
