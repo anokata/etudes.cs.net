@@ -21,6 +21,11 @@ namespace LearnClasses {
             Vector2d v1 = new Vector2d { x = 1, y = 2 };
             Vector2d v2 = new Vector2d { x = 2, y = 4 };
             log.WriteLine((v1 + v2).mag());
+
+            log.WriteLine("======");
+            log.WriteLine("abc"[0]);
+            log.WriteLine((int)("abc"[0]));
+            log.WriteLine((int)("abc"[0]) - 'a');
         }
     }
 
