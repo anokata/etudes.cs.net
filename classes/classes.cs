@@ -26,6 +26,11 @@ namespace LearnClasses {
             log.WriteLine("abc"[0]);
             log.WriteLine((int)("abc"[0]));
             log.WriteLine((int)("abc"[0]) - 'a');
+            log.WriteLine(v2);
+            log.WriteLine(f1);
+
+            Peasant p1 = new Peasant("Bob");
+            p1.display();
         }
     }
 
@@ -70,6 +75,7 @@ namespace LearnClasses {
         public static int getMark(int x) {
             return x*2;
         }
+
     }
 
     class Vector2d {
@@ -81,6 +87,28 @@ namespace LearnClasses {
         public static Vector2d operator +(Vector2d a, Vector2d b) {
             log.WriteLine("Vector2d operator +");
             return new Vector2d {x = a.x + b.x, y = a.y + b.y };
+        }
+    }
+
+    class AHuman {
+        public string role {get; set;}
+
+        public AHuman(string role) {
+            this.role = role;
+        }
+
+        public int getMark() {
+            return (role.Length-1)*2;
+        }
+
+        public void display() {
+            Console.WriteLine($"Role:{this.role} Mark:{this.getMark()}");
+        }
+    }
+
+    class Peasant : AHuman {
+        public Peasant(string r) : base(r)
+        {
         }
     }
 }
