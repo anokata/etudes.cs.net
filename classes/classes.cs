@@ -31,6 +31,15 @@ namespace LearnClasses {
 
             Peasant p1 = new Peasant("Bob");
             p1.display();
+            Object o1 = p1;
+            Peasant p2 = (Peasant) o1;
+            p2.display();
+
+            AHuman h3 = new AHuman("zik");
+            h3.display();
+            // Peasant p3 = (Peasant) h3; // Exception
+            Peasant p3 = h3 as Peasant; // = null
+            if (h3 is Peasant) { Console.WriteLine("IS"); }
         }
     }
 
@@ -92,6 +101,7 @@ namespace LearnClasses {
 
     class AHuman {
         public string role {get; set;}
+        // comment
 
         public AHuman(string role) {
             this.role = role;
