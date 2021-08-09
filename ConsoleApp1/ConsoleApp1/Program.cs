@@ -18,7 +18,17 @@ namespace ConsoleApp1
             }
             Person p = new Person("violan");
             p.display();
+            Console.WriteLine(123.MakeMore());
         }
     }
+
+public  static class IntegerExtension
+{
+    public static int MakeMore(this int x)
+    {
+        var anon = new {name = "abc"};
+        return 1 + x;
+    }
+}
 
 }
