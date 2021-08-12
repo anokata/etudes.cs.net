@@ -6,7 +6,22 @@
         xmlns:local="clr-namespace:stpaint"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-
+    <Grid x:Name="LayoutRoot" Background="#FF323232">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="87*" />
+            <RowDefinition Height="87*" />
+            <RowDefinition Height="87*" />
+            <RowDefinition Height="87*" />
+            <RowDefinition Height="49*" />
+            <RowDefinition Height="38*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock" Grid.Column="0" Grid.ColumnSpan="4" />
+        <Button Grid.Column="0" Grid.Row="1" Click="Button_Click">1</Button>
     </Grid>
 </Window>
